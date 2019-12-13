@@ -10,7 +10,7 @@ import csv
 import glob
 
 label = "Parasitized"
-dirList = glob.glob("B:\ML_Project\cell_images"+label+"\*.png")
+dirList = glob.glob("B:\\ML_Project\\cell_images\\Parasitized"+"\\*.png")
 file = open("B:\ML_Project\csv\\file.csv","a")
 
 
