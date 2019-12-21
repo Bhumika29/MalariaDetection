@@ -32,17 +32,15 @@ for label in labels :
 		ret,thresh = cv2.threshold(im_gray,127,255,0)
 		im2,contours,_ = cv2.findContours(thresh,1,2)
 
-		file.write(label)
-		file.write(",")
-
-		for i in range(5):
-			try:
-				area = cv2.contourArea(contours[i])
-				file.write(str(area))
-			except:
-				file.write("0")
-
-			file.write(",")
+		num=len(contours)
+        	file.write(label)
+       		file.write(",")
+        	if num>=5 :
+            		file.write(str(5))
+            		file.write(",")
+       		else :
+            		file.write(str(num))
+            		file.write(",")
 
 
 		file.write("\n")
