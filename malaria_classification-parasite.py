@@ -34,9 +34,9 @@ y_train
 
 ##Step4: Build a model
 
-model = RandomForestClassifier(n_estimators=100,max_depth=5)
+model = RandomForestClassifier(n_estimators=100,max_depth=4)
 model.fit(x_train,y_train)
-joblib.dump(model,"rf_malaria_100_5")
+
 
 ##Step5: Make predictions and get classification report
 
